@@ -1,0 +1,16 @@
+
+.bundled {
+    position: relative;
+    /* background-color: blue; */
+    width: 300px;
+    height: 300px;
+   display: inline-block;
+    color: blue;
+    padding: 2rem;
+    background-color: red;
+    background-color: lightgrey;
+}
+
+.highlighted {
+    background-color: lightgreen;
+}
