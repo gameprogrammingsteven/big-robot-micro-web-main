@@ -8,7 +8,7 @@ export default function Bundle(props) {
     return (
          <div 
          onClick={onClicked}
-         className={`${classes.bundled} ${!isActive ? classes.highlighted : ""}`}>
+         className={`${classes.bundled} ${isActive ? classes.highlighted : ""}`}>
             <h2>{title}</h2>
             <p>graph</p>
         </div>
