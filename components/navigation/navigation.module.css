@@ -1,6 +1,6 @@
 .navigation {
-     margin-top: 0;
-    margin: 0 auto; 
+    margin-top: 0;
+    margin: 0 auto;
     padding-top: 2rem;
     padding-bottom: 1rem;
     background-color: darkred;
@@ -8,7 +8,7 @@
 
 .titleHeader {
     font-family: "Air Millhouse Outline", serif;
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: lightsteelblue;
     text-align: center;
 }
@@ -18,7 +18,7 @@
     list-style: inside;
     display: flex;
     margin: 0 auto;
-    background-color:gray;
+    background-color: gray;
     width: 60%;
 }
 
@@ -44,6 +44,17 @@
     border-right: 3px solid black;
 }
 
+/*
+package designer....
+
+Needs to add design.
+App
+Website
+Security
+Database
+Ui analysis
+Brand analysis
+*/
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {

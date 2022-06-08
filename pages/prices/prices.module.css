@@ -2,3 +2,22 @@
     width: 100%;
     border-bottom: 2px black dashed;
 }
+
+.pageDesignHeading {
+    padding: 0;
+    margin: 0;
+    color: red;
+    width: 100%;
+    background-color: lightcyan;
+    height: 5rem;
+}
+
+.calcContainer {
+    background-color: lightskyblue;
+}
+
+
+.pageTextHEading {
+    padding: 0;
+    margin: 0;
+}
