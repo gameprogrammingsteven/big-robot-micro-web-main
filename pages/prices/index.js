@@ -1,5 +1,6 @@
 import Bundle from '../../components/bundle/bundle'
-import {useState} from 'react';
+import { useState } from 'react';
+import classes from './prices.module.css'
 
 function Prices() {
     let hoursPerWeek = 40
@@ -40,7 +41,7 @@ function Prices() {
 
     const clickedUX = (e) => {
         let filteredTitles = activeTitles.filter((e) => e !== undefined)
-        if( filteredTitles.includes(e.title)) {
+        if (filteredTitles.includes(e.title)) {
             setActiveTitles(filteredTitles.filter((title) => title !== e.title))
         } else {
             let newTitles = filteredTitles.push(e.title)
@@ -57,41 +58,26 @@ function Prices() {
 
     const [activeTitles, setActiveTitles] = useState([]);
 
+    const getBundleFor = (dataItem) => {
+        return (
+            <Bundle title={dataItem.title} weeks={dataItem.weeks} isActive={hasTitle(dataItem.title)}
+                onClicked={() => { clickedUX(dataItem) }} key={dataItem.title} />
+        );
+    }
     return <>
-        <h2>Design Aspect</h2>
-        <div> {
-            desSectionArray.map((e) => {
-                return (
-                    <Bundle title={e.title} weeks={e.weeks} isActive={hasTitle(e.title)} 
-                     onClicked={ () =>{clickedUX(e)}} key={e.title}/>
-                );
-            })
-        }
-        
+        <h2>Design the App</h2>
+        <div>
+            {desSectionArray.map((e) => getBundleFor(e))}
         </div>
-        <hr />
-        <h2>Design Aspect</h2>
-        <div> {
-            appSectionArray.map((e) => {
-                return (
-                    <Bundle title={e.title} weeks={e.weeks} isActive={hasTitle(e.title)} 
-                     onClicked={ () =>{clickedUX(e)}} key={e.title}/>
-                );
-            })
-        }
-        
+        <div className={classes.divider}></div>
+        <h2>Develop</h2>
+        <div>
+            {appSectionArray.map((e) => getBundleFor(e))}
         </div>
-        <hr />
-        <h2>Design Aspect</h2>
-        <div> {
-            maintainingSectionArray.map((e) => {
-                return (
-                    <Bundle title={e.title} weeks={e.weeks} isActive={hasTitle(e.title)}
-                     onClicked={ () =>{clickedUX(e)}} key={e.title}/>
-                );
-            })
-        }
-        
+        <div className={classes.divider}></div>
+        <h2>After</h2>
+        <div>
+            {maintainingSectionArray.map((e) => getBundleFor(e))}
         </div>
     </>
 }
