@@ -24,21 +24,23 @@ function Navigation() {
     ];
 
     const newRoutes = home ? routes.filter((element) => {
-       return element.title !== 'Main'
+        return element.title !== 'Main'
     }) : routes;
 
     return (
         <>
-          <nav className={classes.navigation}>
+            <nav className={classes.navigation}>
                 <h1 className={classes.titleHeader}>Big Robot Micro</h1>
-                <ul className={classes.unorderedList}>
-                    {
-                        newRoutes.map((element) => {
-                            return <li className={classes.listItem} key={element.title}>
-                                <Link href={element.routePath}>{element.title}</Link>
-                            </li>
-                        })}
-                </ul>
+                <div className={classes.navBar}>
+                    <ul className={classes.unorderedList}>
+                        {
+                            newRoutes.map((element) => {
+                                return <li className={classes.listItem} key={element.title}>
+                                    <Link href={element.routePath}>{element.title}</Link>
+                                </li>
+                            })}
+                    </ul>
+                </div>
             </nav>
         </>
     );
