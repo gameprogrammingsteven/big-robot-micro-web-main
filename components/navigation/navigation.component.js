@@ -23,9 +23,9 @@ function Navigation() {
         },
     ];
 
-    const newRoutes = home ? routes.filter((element) => {
-        return element.title !== 'Main'
-    }) : routes;
+    // const newRoutes = home ? routes.filter((element) => {
+    //     return element.title !== 'Main'
+    // }) : routes;
 
     return (
         <>
@@ -34,7 +34,7 @@ function Navigation() {
                 <div className={classes.navBar}>
                     <ul className={classes.unorderedList}>
                         {
-                            newRoutes.map((element) => {
+                            routes.map((element) => {
                                 return <li className={classes.listItem} key={element.title}>
                                     <Link href={element.routePath}>{element.title}</Link>
                                 </li>

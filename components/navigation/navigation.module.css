@@ -40,8 +40,9 @@
     margin: auto 5rem;
     padding: 13px;
     color: white;
-    font-size: 2rem;
-    font-family: "Air Millhouse Outline", serif;
+    font-size: 1.3rem;
+    font-family: "Dosis", sans-serif, 300;
+    font-weight: 300;
     background-color: #6595BA;
     border-radius: 5rem;
     /* border-right: 3px solid black; */

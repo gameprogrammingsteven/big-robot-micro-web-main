@@ -1,16 +1,47 @@
 .container {
-  padding: 0 2rem;
+  padding: 0;
 }
 
 .main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.infoMain {
+  margin: 0;
+  background-color: #B1DAFB;
+  min-height: 18rem;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
+
+.lightBlueBubble {
+  position: relative;
+  padding: 0;
+  margin-left: 8rem;
+  display: inline-block;
+  width: 31%;
+  min-width: 300px;
+  background-color: #EDF7FF;
+  border-radius: 1.5rem;
+  box-shadow: 11px 11px 18px rgba(0, 0, 0, 0.19);
+}
+
+.lightTextForBubble {
+  color: #304454;
+  text-align: left;
+  padding-left: 2rem;
+  padding-bottom: 1.8rem;
+}
+
+.bubbleTitle {
+  font-weight: 100;
+  text-align: center;
+  color: #6595BA;
+}
+
 
 .footer {
   display: flex;
