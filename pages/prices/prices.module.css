@@ -16,6 +16,13 @@
     text-align: center;
 }
 
+.packageList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 2rem;
+    justify-content: center;
+}
+
 .packageSection {
     background-color: #6595BA;
 }

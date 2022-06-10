@@ -9,12 +9,91 @@ function Prices() {
     const MULTIPLIER_BASIC_APP = 1;
     const MULTIPLIER_COMPLEX_APP = 3.5;
 
+    const [total, setTotal] = useState(0);
+
+
+    /* monthly added */
+    /*
+    Base App/Platform - 5 weeks of time
+    Public api integration - 3.5 weeks
+    BLE - 3 weeks  
+    maps - 4 weeks/month (time allotted)
+    weather - 3 weeks.
+    social - 4 weeks.
+    video - 4 weeks.
+    photo - 2 weeks.
+    quizzes - 3 weeks.
+    E-Commerce - 2 weeks
+    Easy Feature - 2 weeks
+    Backend - 5 weeks + maintenance.
+    Logging in - 1.5 weeks. (Firebase). Bigger is own database.
+    Simple Game - 8 weeks.
+    AR/MR - 8 weeks
+    VR - 10 weeks (simple complexity)
+    Large Game - 50 weeks.
+    Enterprise - 5 weeks. (integrate)
+    Maintenance - 2 weeks/month of time.
+    Simple database - 0.5/month.
+    */
+
     //monthly = monthly weeks' worth of hrs like database, maintenance, retainer, blah.
 
     const desSectionArray = [
         {
-            title: "UXDesign",
+            title: "Small Base App",
+            weeks: 2,
+            isActive: false,
+            alwaysOn: true,
+            description: "Setup of a small application.",
+            monthly: 0
+        },
+        {
+            title: "Medium Base App",
+            weeks: 5,
+            isActive: false,
+            alwaysOn: true,
+            description: "You have a bunch of features but they're grouped together in one general idea.",
+            monthly: 0
+        },
+        {
+            title: "Large Base App",
+            weeks: 10,
+            isActive: false,
+            alwaysOn: true,
+            description: "I suggest consulting with us. You probably don't need something this big.",
+            monthly: 0
+        },
+        {
+            title: "Consulting - Weekly",
             weeks: 1,
+            isActive: false,
+            description: "Discuss technical requirements with team.",
+            monthly: 0
+        },
+        {
+            title: "Consulting - One Day (In person)",
+            weeks: 0.5,
+            isActive: false,
+            description: "We come out and talk about your initial problem you want solving.",
+            monthly: 0
+        },
+        {
+            title: "Initial Consult (On telephone)",
+            weeks: 0.025,
+            isActive: false,
+            description: "One hour of time after our free consult about your problem.",
+            monthly: 0
+        },
+        {
+            title: "Discovery",
+            weeks: 1.4,
+            isActive: false,
+            description: "Large apps require research. This involves teams from all aspects of the system. You'll know if you need this type of phase.",
+            monthly: 0
+        },
+        {
+            title: "UXDesign",
+            weeks: 1.4,
             isActive: false,
             description: "design",
             monthly: 0
@@ -23,15 +102,99 @@ function Prices() {
 
     const appSectionArray = [
         {
-            title: "App Development",
-            weeks: 1,
+            title: "Manual Tests",
+            weeks: 2.5,
+            isActive: false,
+            description: "make",
+            monthly: 1
+        },
+        {
+            title: "Mapping",
+            weeks: 4,
             isActive: false,
             description: "make",
             monthly: 0
         },
         {
-            title: "Manual Tests",
-            weeks: 2.5,
+            title: "Weather",
+            weeks: 3,
+            isActive: false,
+            description: "make",
+            monthly: 0
+        },
+        {
+            title: "Social",
+            weeks: 4,
+            isActive: false,
+            description: "make",
+            monthly: 0
+        },
+        {
+            title: "Bluetooth",
+            weeks: 3,
+            isActive: false,
+            description: "make",
+            monthly: 0
+        },
+        {
+            title: "Video",
+            weeks: 4,
+            isActive: false,
+            description: "make",
+            monthly: 0
+        },
+        {
+            title: "Photos/Image",
+            weeks: 2,
+            isActive: false,
+            description: "make",
+            monthly: 0
+        },
+        {
+            title: "Quizzing",
+            weeks: 2,
+            isActive: false,
+            description: "make",
+            monthly: 0
+        },
+        {
+            title: "Back-end",
+            weeks: 5,
+            isActive: false,
+            description: "make",
+            monthly: 0
+        },
+        {
+            title: "External API integration",
+            weeks: 3.5,
+            isActive: false,
+            description: "make",
+            monthly: 0
+        },
+        {
+            title: "Augmented/Mixed",
+            weeks: 8,
+            isActive: false,
+            description: "make",
+            monthly: 0
+        },
+        {
+            title: "Users and logging in - external database",
+            weeks: 1.5,
+            isActive: false,
+            description: "make",
+            monthly: 0
+        },
+        {
+            title: "Users and logging in - internal/complexity",
+            weeks: 9,
+            isActive: false,
+            description: "make",
+            monthly: 0
+        },
+        {
+            title: "Large Game (no art included)",
+            weeks: 50,
             isActive: false,
             description: "make",
             monthly: 0
@@ -40,24 +203,37 @@ function Prices() {
 
     const maintainingSectionArray = [
         {
-            title: "Maintenance",
+            title: "Retainer",
             weeks: 3,
             isActive: false,
-            description: "bugs",
+            description: "A retainer for keeping us around to fix things",
+            monthly: 1
+        },
+        {
+            title: "Video Services",
+            weeks: 3,
+            isActive: false,
+            description: "We're a video studio. We get get you ready to market and sell.",
             monthly: 1
         },
     ]
 
     const clickedUX = (e) => {
         //  let filteredTitles = activeTitles;
+        let workingArray = null;  //React's render cycle and my function order. It waits until all states updated. Active isn't updated until later
+        //looping. So I need a workaround for now.
         if (activeTitles.includes(e.title)) {
-            setActiveTitles(activeTitles.filter((title) => title !== e.title))
+            const newTitles = activeTitles.filter((title) => title !== e.title)
+            setActiveTitles(newTitles)
+            workingArray = newTitles
         } else {
             activeTitles.push(e.title) //returns items... which isn't string. causes issue if you try to assign on this line.
-            const newTitles = activeTitles.filter((e) => e !== undefined)
-            setActiveTitles(newTitles)
+            // const newTitles = activeTitles.filter((e) => e !== undefined)
+            setActiveTitles(activeTitles)
+            workingArray = activeTitles
         }
-        console.log("Total weeks: " + totalWeeks());
+        totalWeeks(workingArray);
+        //console.log("Total weeks: " + totalWeeks());
     }
 
     const hasTitle = (title) => {
@@ -67,14 +243,17 @@ function Prices() {
     const [activeTitles, setActiveTitles] = useState([]);
 
 
-    const totalWeeks = () => {
+    const totalWeeks = (workingArray) => {
         let amount = 0;
         const featuresArrayFlattened = [...desSectionArray, ...appSectionArray, ...maintainingSectionArray];
         featuresArrayFlattened.forEach(e => {
-            if (hasTitle(e.title)) {
+            if (workingArray.includes(e.title)) {
                 amount += e.weeks
             }
         });
+        setTotal(amount);
+        console.log("total arr: " + activeTitles);
+        console.log("Amount: " + amount);
         //reducer had objects return. Likely due to using array differently than example.
         return amount;
     }
@@ -82,12 +261,14 @@ function Prices() {
     const getBundleFor = (dataItem) => {
         return (
             <Bundle title={dataItem.title} weeks={dataItem.weeks} isActive={hasTitle(dataItem.title)}
-                onClicked={() => { clickedUX(dataItem) }} key={dataItem.title} />
+                onClicked={() => { clickedUX(dataItem) }} desc={dataItem.description} key={dataItem.title} />
         );
     } //todo find items at other calc
+
+    // total = totalWeeks;
     return <>
         <div className={classes.pageDesignHeading}>
-            <h2 className={classes.pageTextHEading}>Design the App</h2>
+            <h2 className={classes.pageTextHeading}>Estimated Initial Costs: ${Math.ceil(total * hoursPerWeek * pricePerHour)}</h2>
         </div>
 
         <div className={classes.calcContainer}>
@@ -95,7 +276,7 @@ function Prices() {
                 <div className={classes.packageHeading}>
                     Develop
                 </div>
-                <div>
+                <div className={classes.packageList}>
                     {desSectionArray.map((e) => getBundleFor(e))}
                 </div>
                 <div className={classes.divider}></div>
@@ -104,7 +285,7 @@ function Prices() {
                 <div className={classes.packageHeading}>
                     Develop
                 </div>
-                <div>
+                <div className={classes.packageList}>
                     {appSectionArray.map((e) => getBundleFor(e))}
                 </div>
                 <div className={classes.divider}></div>
@@ -112,7 +293,7 @@ function Prices() {
             <div className={classes.packageSection}>
                 <div className={classes.packageHeading}>
                     After</div>
-                <div>
+                <div className={classes.packageList}>
                     {maintainingSectionArray.map((e) => getBundleFor(e))}
                 </div>
             </div>
@@ -120,27 +301,4 @@ function Prices() {
     </>
 }
 
-/* monthly added */
-/*
-Base App/Platform - 5 weeks of time
-Public api integration - 3.5 weeks
-BLE - 3 weeks
-maps - 4 weeks/month (time allotted)
-weather - 3 weeks.
-social - 4 weeks.
-video - 4 weeks.
-photo - 2 weeks.
-quizzes - 3 weeks.
-E-Commerce - 2 weeks
-Easy Feature - 2 weeks
-Backend - 5 weeks + maintenance.
-Logging in - 1.5 weeks. (Firebase). Bigger is own database.
-Simple Game - 8 weeks.
-AR/MR - 8 weeks
-VR - 10 weeks (simple complexity)
-Large Game - 50 weeks.
-Enterprise - 5 weeks. (integrate)
-Maintenance - 2 weeks/month of time.
-Simple database - 0.5/month.
-*/
 export default Prices;
