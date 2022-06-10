@@ -86,16 +86,16 @@ function Prices() {
         },
         {
             title: "Discovery",
-            weeks: 1.4,
+            weeks: 3,
             isActive: false,
-            description: "Large apps require research. This involves teams from all aspects of the system. You'll know if you need this type of phase.",
+            description: "Design and Research for medium-size apps.",
             monthly: 0
         },
         {
             title: "UXDesign",
             weeks: 1.4,
             isActive: false,
-            description: "design",
+            description: "Hires a designer to create a prototype for a simple app.",
             monthly: 0
         },
     ]
@@ -105,98 +105,98 @@ function Prices() {
             title: "Manual Tests",
             weeks: 2.5,
             isActive: false,
-            description: "make",
+            description: "Adds one dedicated manual tester",
             monthly: 1
         },
         {
             title: "Mapping",
             weeks: 4,
             isActive: false,
-            description: "make",
+            description: "Standard Maps/GPS integration.",
             monthly: 0
         },
         {
             title: "Weather",
             weeks: 3,
             isActive: false,
-            description: "make",
+            description: "Weather data from a standard resource integrated. Monthly API fees may apply",
             monthly: 0
         },
         {
-            title: "Social",
+            title: "Social setup",
             weeks: 4,
             isActive: false,
-            description: "make",
+            description: "Integrate the 'gram or Twitter",
             monthly: 0
         },
         {
             title: "Bluetooth",
             weeks: 3,
             isActive: false,
-            description: "make",
+            description: "Initial setup for getting devices to speak to one-another",
             monthly: 0
         },
         {
             title: "Video",
             weeks: 4,
             isActive: false,
-            description: "make",
+            description: "Video playback and recording.",
             monthly: 0
         },
         {
             title: "Photos/Image",
             weeks: 2,
             isActive: false,
-            description: "make",
+            description: "Camera, photo editing, and related features such as image altering",
             monthly: 0
         },
         {
             title: "Quizzing",
             weeks: 2,
             isActive: false,
-            description: "make",
+            description: "Basic addition of quiz app, base questions.",
             monthly: 0
         },
         {
             title: "Back-end",
             weeks: 5,
             isActive: false,
-            description: "make",
+            description: "If you need to store basic data. Fees vary based on CoPPA and other regulations such as GDPR",
             monthly: 0
         },
         {
             title: "External API integration",
             weeks: 3.5,
             isActive: false,
-            description: "make",
+            description: "Get data from someone's server and setup a visual representation.",
             monthly: 0
         },
         {
             title: "Augmented/Mixed",
             weeks: 8,
             isActive: false,
-            description: "make",
+            description: "A short, simple, mixed reality app for the phone. Magic Leap available, may add to estimate.",
             monthly: 0
         },
         {
             title: "Users and logging in - external database",
             weeks: 1.5,
             isActive: false,
-            description: "make",
+            description: "Login for pre-existing database, or sign-in-with FB/Goog or your own servers.",
             monthly: 0
         },
         {
             title: "Users and logging in - internal/complexity",
             weeks: 9,
             isActive: false,
-            description: "make",
+            description: "We make the user database.",
             monthly: 0
         },
         {
             title: "Large Game (no art included)",
             weeks: 50,
             isActive: false,
-            description: "make",
+            description: "You wanna make something fun with characters and AI and things that go splat. These can become large very fast. Or small. Talk with us to see if we should raise, or lower, time and costs.",
             monthly: 0
         },
     ]
@@ -207,13 +207,6 @@ function Prices() {
             weeks: 3,
             isActive: false,
             description: "A retainer for keeping us around to fix things",
-            monthly: 1
-        },
-        {
-            title: "Video Services",
-            weeks: 3,
-            isActive: false,
-            description: "We're a video studio. We get get you ready to market and sell.",
             monthly: 1
         },
     ]
@@ -261,7 +254,8 @@ function Prices() {
     const getBundleFor = (dataItem) => {
         return (
             <Bundle title={dataItem.title} weeks={dataItem.weeks} isActive={hasTitle(dataItem.title)}
-                onClicked={() => { clickedUX(dataItem) }} desc={dataItem.description} key={dataItem.title} />
+                onClicked={() => { clickedUX(dataItem) }} desc={dataItem.description} key={dataItem.title}
+                cost={dataItem.weeks * hoursPerWeek * pricePerHour} />
         );
     } //todo find items at other calc
 

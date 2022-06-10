@@ -1,4 +1,6 @@
 .bundled {
+    display: flex;
+    flex-direction: column;
     border-radius: 15px;
     position: relative;
     /* background-color: blue; */
@@ -10,18 +12,29 @@
     background-color: #b1dafb;
     margin: 1.4rem;
     box-shadow: 7px 5px 10px #000A;
+    justify-content: space-evenly;
 }
 
 .title {
+    display: block;
     margin: 0;
     padding: 0;
     font-weight: 100;
     font-size: 1.1rem;
 }
 
+.paragraphCost {
+    display: flex;
+    flex-direction: column;
+    vertical-align: bottom;
+    font-size: 1rem;
+    text-align: center;
+    /* margin-top: auto; */
+}
+
 .paragraph {
     font-size: 1rem;
-
+    display: block;
 }
 
 .paragraph::first-letter {
