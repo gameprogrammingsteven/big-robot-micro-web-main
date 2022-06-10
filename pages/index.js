@@ -22,6 +22,92 @@ export default function Home() {
             </p>
           </div>
         </div>
+
+        <div className={styles.info2}>
+          <div className={styles.info2Bubble}>
+            <h2 className={styles.info2BubbleTitle}>
+              Main Title
+            </h2>
+            <p className={styles.info2BubbleP}>
+              text in
+            </p>
+          </div>
+
+          <div className={styles.info2Bubble}>
+            <h2 className={styles.info2BubbleTitle}>
+              Main Title
+            </h2>
+            <p className={styles.info2BubbleP}>
+              text in
+            </p>
+          </div>
+
+          <div className={styles.info2Bubble}>
+            <h2 className={styles.info2BubbleTitle}>
+              Main Title
+            </h2>
+            <p className={styles.info2BubbleP}>
+              text in
+            </p>
+          </div>
+        </div>
+
+
+        <div className={styles.skillSection}>
+          <div className={styles.skillBubble}>
+            <h2 className={styles.skillTitle}>
+              Main Title
+            </h2>
+            <p className={styles.skillBubbleText}>
+              text in
+            </p>
+          </div>
+
+          <div className={styles.skillBubble}>
+            <h2 className={styles.skillTitle}>
+              Main Title
+            </h2>
+            <p className={styles.skillBubbleText}>
+              text in
+            </p>
+          </div>
+
+          <div className={styles.skillBubble}>
+            <h2 className={styles.skillTitle}>
+              Main Title
+            </h2>
+            <p className={styles.skillBubbleText}>
+              text in
+            </p>
+          </div>
+
+          <div className={styles.skillBubble}>
+            <h2 className={styles.skillTitle}>
+              Main Title
+            </h2>
+            <p className={styles.skillBubbleText}>
+              text in
+            </p>
+          </div>
+
+          <div className={styles.skillBubble}>
+            <h2 className={styles.skillTitle}>
+              Main Title
+            </h2>
+            <p className={styles.skillBubbleText}>
+              text in
+            </p>
+          </div>
+
+          <div className={styles.skillBubble}>
+            <h2 className={styles.skillTitle}>
+              Main Title
+            </h2>
+            <p className={styles.skillBubbleText}>
+              text in
+            </p>
+          </div>
+        </div>
       </main>
 
       <footer className={styles.footer}>

@@ -4,12 +4,29 @@
 }
 
 .pageDesignHeading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0;
     margin: 0;
-    color: red;
+    color: #134973;
     width: 100%;
-    background-color: lightcyan;
+    background-color: #b1dafb;
     height: 5rem;
+    text-align: center;
+}
+
+.packageSection {
+    background-color: #6595BA;
+}
+
+.packageHeading {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 200;
+    text-decoration: underline;
+    /* text-decoration-color: #B1DAFB; */
+    text-decoration-color: white;
 }
 
 .calcContainer {
@@ -17,7 +34,7 @@
 }
 
 
-.pageTextHEading {
+.pageTextHeading {
     padding: 0;
     margin: 0;
 }

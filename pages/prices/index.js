@@ -91,20 +91,30 @@ function Prices() {
         </div>
 
         <div className={classes.calcContainer}>
-
-
-            <div>
-                {desSectionArray.map((e) => getBundleFor(e))}
+            <div className={classes.packageSection}>
+                <div className={classes.packageHeading}>
+                    Develop
+                </div>
+                <div>
+                    {desSectionArray.map((e) => getBundleFor(e))}
+                </div>
+                <div className={classes.divider}></div>
             </div>
-            <div className={classes.divider}></div>
-            <h2>Develop</h2>
-            <div>
-                {appSectionArray.map((e) => getBundleFor(e))}
+            <div className={classes.packageSection}>
+                <div className={classes.packageHeading}>
+                    Develop
+                </div>
+                <div>
+                    {appSectionArray.map((e) => getBundleFor(e))}
+                </div>
+                <div className={classes.divider}></div>
             </div>
-            <div className={classes.divider}></div>
-            <h2>After</h2>
-            <div>
-                {maintainingSectionArray.map((e) => getBundleFor(e))}
+            <div className={classes.packageSection}>
+                <div className={classes.packageHeading}>
+                    After</div>
+                <div>
+                    {maintainingSectionArray.map((e) => getBundleFor(e))}
+                </div>
             </div>
         </div>
     </>
