@@ -56,55 +56,46 @@ export default function Home() {
         <div className={styles.skillSection}>
           <div className={styles.skillBubble}>
             <h2 className={styles.skillTitle}>
-              Main Title
+              iOS (iPhone)
             </h2>
             <p className={styles.skillBubbleText}>
-              text in
+              Our home/wheelhouse has been iOS apps for over 11+ yrs. Swift and Objective-C + Flutter.
             </p>
           </div>
 
           <div className={styles.skillBubble}>
             <h2 className={styles.skillTitle}>
-              Main Title
+              Unity
             </h2>
             <p className={styles.skillBubbleText}>
-              text in
+              We've actually worked on Unity under contract for Seattle businesses. Now we do it for you.
             </p>
           </div>
 
           <div className={styles.skillBubble}>
             <h2 className={styles.skillTitle}>
-              Main Title
+              Android
             </h2>
             <p className={styles.skillBubbleText}>
-              text in
+              Let's get your Android app going, native or cross-platform using Flutter and React Native if you wish.
             </p>
           </div>
 
           <div className={styles.skillBubble}>
             <h2 className={styles.skillTitle}>
-              Main Title
+              React Native
             </h2>
             <p className={styles.skillBubbleText}>
-              text in
+              We recommend not doing this, but if you have a React Native app or a simple idea that doesn't need anything specially designed, it's a good tool.
             </p>
           </div>
 
           <div className={styles.skillBubble}>
             <h2 className={styles.skillTitle}>
-              Main Title
+              Flutter
             </h2>
             <p className={styles.skillBubbleText}>
-              text in
-            </p>
-          </div>
-
-          <div className={styles.skillBubble}>
-            <h2 className={styles.skillTitle}>
-              Main Title
-            </h2>
-            <p className={styles.skillBubbleText}>
-              text in
+              If you want a cross-platform app that doesn't sacrifice battery or performance the same way other tools do, we recommend Flutter.
             </p>
           </div>
         </div>
