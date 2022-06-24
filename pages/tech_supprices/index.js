@@ -1,10 +1,10 @@
 import Bundle from '../../components/bundle/bundle'
 import { useState } from 'react';
-import classes from './prices.module.css'
+import classes from './tech_supprice.module.css'
 
-function Prices() {
+export default function TechSupPrice() {
     let hoursPerWeek = 40
-    let pricePerHour = 122
+    let pricePerHour = 50
 
     const MULTIPLIER_BASIC_APP = 1;
     const MULTIPLIER_COMPLEX_APP = 3.5;
@@ -190,7 +190,7 @@ function Prices() {
             weeks: 9,
             isActive: false,
             description: "We make the user database.",
-            monthly: 1.5
+            monthly: 0
         },
         {
             title: "Large Game (no art included)",
@@ -268,7 +268,7 @@ function Prices() {
         <div className={classes.calcContainer}>
             <div className={classes.packageSection}>
                 <div className={classes.packageHeading}>
-                    Design
+                    Develop
                 </div>
                 <div className={classes.packageList}>
                     {desSectionArray.map((e) => getBundleFor(e))}
@@ -295,4 +295,4 @@ function Prices() {
     </>
 }
 
-export default Prices;
+// export default Prices;

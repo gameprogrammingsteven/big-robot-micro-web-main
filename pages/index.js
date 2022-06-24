@@ -15,10 +15,10 @@ export default function Home() {
         <div className={styles.infoMain}>
           <div className={styles.lightBlueBubble}>
             <h2 className={styles.bubbleTitle}>
-              Main Title
+              You have an idea.
             </h2>
             <p className={styles.lightTextForBubble}>
-              text in
+              We turn your ideas into tangible things and reduce the time it takes for customers to find, buy, engage with, and share your product or idea.
             </p>
           </div>
         </div>
@@ -26,28 +26,28 @@ export default function Home() {
         <div className={styles.info2}>
           <div className={styles.info2Bubble}>
             <h2 className={styles.info2BubbleTitle}>
-              Main Title
+              Experience
             </h2>
             <p className={styles.info2BubbleP}>
-              text in
+              We've seen a variety of processes, products, technologies. From Mobile to Games to Website.
             </p>
           </div>
 
           <div className={styles.info2Bubble}>
             <h2 className={styles.info2BubbleTitle}>
-              Main Title
+              Skill
             </h2>
             <p className={styles.info2BubbleP}>
-              text in
+              Our technologies are listed. But they're not limited. We're constantly improving.
             </p>
           </div>
 
           <div className={styles.info2Bubble}>
             <h2 className={styles.info2BubbleTitle}>
-              Main Title
+              MDM/Enterprise Ability
             </h2>
             <p className={styles.info2BubbleP}>
-              text in
+              Our owner used to maintain enterprise apps used by govt. and major players. We cand integrate MDM and similar into your apps.
             </p>
           </div>
         </div>

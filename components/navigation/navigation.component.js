@@ -14,6 +14,10 @@ function Navigation() {
             routePath: "/"
         },
         {
+            title: "Technical Supp.",
+            routePath: "/tech_supprices"
+        },
+        {
             title: "Packages",
             routePath: "/prices"
         },

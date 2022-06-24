@@ -23,10 +23,16 @@
     font-size: 1.1rem;
 }
 
+/*
+TODO
+make website for tech assist
+
+
+*/
+
 .paragraphCost {
     display: flex;
     flex-direction: column;
-    vertical-align: bottom;
     font-size: 1rem;
     text-align: center;
     /* margin-top: auto; */
