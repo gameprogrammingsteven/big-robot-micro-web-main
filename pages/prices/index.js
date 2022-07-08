@@ -102,13 +102,6 @@ function Prices() {
 
     const appSectionArray = [
         {
-            title: "Manual Tests",
-            weeks: 2.5,
-            isActive: false,
-            description: "Adds one dedicated manual tester",
-            monthly: 1
-        },
-        {
             title: "Mapping",
             weeks: 4,
             isActive: false,
@@ -120,13 +113,6 @@ function Prices() {
             weeks: 3,
             isActive: false,
             description: "Weather data from a standard resource integrated. Monthly API fees may apply",
-            monthly: 0
-        },
-        {
-            title: "Social setup",
-            weeks: 4,
-            isActive: false,
-            description: "Integrate the 'gram or Twitter",
             monthly: 0
         },
         {
@@ -159,16 +145,9 @@ function Prices() {
         },
         {
             title: "Back-end",
-            weeks: 5,
+            weeks: 6,
             isActive: false,
-            description: "If you need to store basic data. Fees vary based on CoPPA and other regulations such as GDPR",
-            monthly: 0
-        },
-        {
-            title: "External API integration",
-            weeks: 3.5,
-            isActive: false,
-            description: "Get data from someone's server and setup a visual representation.",
+            description: "We avoid back-end development. This is consulted out to a proven devteam.",
             monthly: 0
         },
         {
@@ -179,18 +158,11 @@ function Prices() {
             monthly: 0
         },
         {
-            title: "Users and logging in - external database",
+            title: "Users and logging in: your database",
             weeks: 1.5,
             isActive: false,
-            description: "Login for pre-existing database, or sign-in-with FB/Goog or your own servers.",
+            description: "Login for pre-existing database",
             monthly: 0
-        },
-        {
-            title: "Users and logging in - internal/complexity",
-            weeks: 9,
-            isActive: false,
-            description: "We make the user database.",
-            monthly: 1.5
         },
         {
             title: "Large Game (no art included)",
