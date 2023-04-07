@@ -20,7 +20,7 @@ export default function Home() {
       </div>
       <main className={styles.main}>
         <div className={styles.infoMain}>
-          <div className={styles.lightBlueBubble}>
+          <div className={`${styles.lightBlueBubble} ${styles.bubbleMain}`}>
             <h2 className={styles.bubbleTitle}>
               You have an idea.
             </h2>
@@ -29,8 +29,8 @@ export default function Home() {
             </p>
           </div>
 
-          <div className={styles.herodiv}>
-            <Image src="/redrobotmonitor.png" alt="" width="420px" height="230px" layout="responsive" className={styles.hero} />
+          <div className={`${styles.herodiv} ${styles.bubbleMain}`}>
+            <Image src="/redrobotmonitor.png" alt="" width="420px" height="300px" layout="fill" className={styles.hero} />
           </div>
 
         </div>
