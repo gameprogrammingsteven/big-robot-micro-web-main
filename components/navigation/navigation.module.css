@@ -1,26 +1,45 @@
 .navigation {
-    margin: 0;
-    padding: 0 0;
-    background-color: #6595BA;
+  margin: 0;
+  padding: 0 0;
+  background-color: #a5b8c7;
+}
+
+.logo {
+  width: 400px;
+  height: 300px;
+}
+
+.mainImageHeader {
+  display: flex;
+  max-height: 300px;
+  /* width: 100%; */
+  align-items: center;
+  justify-content: center;
 }
 
 .titleHeader {
-    font-family: "Dosis", sans-serif;
-    font-weight: 800;
-    font-size: 3.5rem;
-    color: white;
-    text-align: center;
-    padding: 0;
-    margin: 0;
+  font-family: "Dosis", sans-serif;
+  font-weight: 800;
+  font-size: 3.5rem;
+  color: white;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.logoWrapperView {
+  width: 420px;
+  height: 240px;
+  padding: 1.5rem;
 }
 
 .unorderedList {
-    text-align: center;
-    list-style: inside;
-    display: flex;
-    margin: 0 auto;
-    padding: 5px 0;
-    width: 100%;
+  text-align: center;
+  list-style: inside;
+  display: flex;
+  margin: 0 auto;
+  padding: 5px 0;
+  width: 100%;
 }
 
 /* .unorderedList li {
@@ -31,31 +50,30 @@
     background-color: blue;
 } */
 .listItem:last-child {
-    border-right: none;
+  border-right: none;
 }
 
 .listItem {
-    display: inline;
-    flex: auto;
-    margin: auto 5rem;
-    padding: 13px;
-    color: white;
-    font-size: 1.3rem;
-    font-family: "Dosis", sans-serif, 300;
-    font-weight: 300;
-    background-color: #6595BA;
-    border-radius: 5rem;
-    /* border-right: 3px solid black; */
+  display: inline;
+  flex: auto;
+  margin: auto 5rem;
+  padding: 13px;
+  color: white;
+  font-size: 1.3rem;
+  font-family: "Dosis", sans-serif, 300;
+  font-weight: 400;
+  background-color: #6595ba;
+  border-radius: 0.3rem;
+  /* border-right: 3px solid black; */
 }
 
 .navBar {
-    min-height: 4rem;
-    margin: 0;
-    margin-top: 1rem;
-    padding: 0;
-    background-color: #f5f5f5;
+  min-height: 4rem;
+  margin: 0;
+  margin-top: 0rem;
+  padding: 0;
+  background-color: #f5f5f5;
 }
-
 
 /*
 package designer....
@@ -70,8 +88,32 @@ Brand analysis
 */
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
-    .unorderedList {
-        width: 100%;
-    }
+@media only screen and (max-width: 720px) {
+  .mainImageHeader {
+    display: flex;
+    /* height: 130px; */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .unorderedList {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .listItem {
+    margin: 0.5rem;
+  }
+
+  .logo {
+    width: 200px;
+    height: 100px;
+  }
+
+  .logoWrapperView {
+    width: 230px;
+    height: 150px;
+    padding: 0rem;
+    padding-top: 1rem;
+  }
 }

@@ -1,4 +1,4 @@
-import Bundle from '../../components/bundle/bundle'
+import Bundle from '../../bundle/bundle'
 import { useState } from 'react';
 import classes from './tech_supprice.module.css'
 

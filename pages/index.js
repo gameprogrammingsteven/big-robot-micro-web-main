@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -10,6 +11,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <div className={styles.mainImageHeader}>
+        <div className={styles.logoWrapperView}>
+          <Image src="/mainimg.png" alt="" width="420px" height="230px" layout="responsive" className={styles.logo}
+          />
+        </div>
+        {/* <img src={logo} alt="Big Robot Micro Image" className={classes.logo} width="300px" height="300px" /> */}
+      </div>
       <main className={styles.main}>
         <div className={styles.infoMain}>
           <div className={styles.lightBlueBubble}>
@@ -20,7 +28,13 @@ export default function Home() {
               We turn your ideas into tangible things and reduce the time it takes for customers to find, buy, engage with, and share your product or idea.
             </p>
           </div>
+
+          <div className={styles.herodiv}>
+            <Image src="/redrobotmonitor.png" alt="" width="420px" height="230px" layout="responsive" className={styles.hero} />
+          </div>
+
         </div>
+
 
         <div className={styles.info2}>
           <div className={styles.info2Bubble}>
@@ -37,16 +51,16 @@ export default function Home() {
               Skill
             </h2>
             <p className={styles.info2BubbleP}>
-              Our technologies are listed. But they&apos;re not limited. We&apos;re constantly improving.
+              Our programmers code for fun and for a job. We bring skills, and genuine interest in coding.
             </p>
           </div>
 
           <div className={styles.info2Bubble}>
             <h2 className={styles.info2BubbleTitle}>
-              MDM/Enterprise Ability
+              MDM/Enterprise
             </h2>
             <p className={styles.info2BubbleP}>
-              Our owner used to maintain enterprise apps used by govt. and major players. We cand integrate MDM and similar into your apps.
+              We integrate MDM and similar.
             </p>
           </div>
         </div>
@@ -58,7 +72,7 @@ export default function Home() {
               iOS (iPhone)
             </h2>
             <p className={styles.skillBubbleText}>
-              Our home/wheelhouse has been iOS apps for over 11+ yrs. Swift and Objective-C + Flutter.
+              We offer native apps using Swift, SwiftUI, and integrate with any service or library.
             </p>
           </div>
 

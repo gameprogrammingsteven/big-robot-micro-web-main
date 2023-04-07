@@ -4,7 +4,7 @@ import classes from './prices.module.css'
 
 function Prices() {
     let hoursPerWeek = 40
-    let pricePerHour = 122
+    let pricePerHour = 50
 
     const MULTIPLIER_BASIC_APP = 1;
     const MULTIPLIER_COMPLEX_APP = 3.5;
@@ -175,10 +175,10 @@ function Prices() {
 
     const maintainingSectionArray = [
         {
-            title: "Retainer",
-            weeks: 3,
+            title: "Maintenance",
+            weeks: 2.5,
             isActive: false,
-            description: "A retainer for keeping us around to fix things",
+            description: "You want us on-call for this/that reason",
             monthly: 1
         },
     ]

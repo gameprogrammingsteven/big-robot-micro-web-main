@@ -1,7 +1,10 @@
 import classes from './navigation.module.css'
 // import 'bootstrap/dist/css/bootstrap.min.css';
+// import logo from './mainimg.png'
 import { Router, useRouter } from 'next/router' //push page. replace?
 import Link from 'next/link'
+import Image from 'next/image'
+
 // import { Navigation } from 'bootstrap'
 //export static
 function Navigation() {
@@ -10,15 +13,15 @@ function Navigation() {
 
     let routes = [
         {
-            title: "Main",
+            title: "Home",
             routePath: "/"
         },
+        // {
+        //     title: "Technical Supp.",
+        //     routePath: "/tech_supprices"
+        // },
         {
-            title: "Technical Supp.",
-            routePath: "/tech_supprices"
-        },
-        {
-            title: "Packages",
+            title: "Dev Svcs",
             routePath: "/prices"
         },
         {
@@ -32,21 +35,20 @@ function Navigation() {
     // }) : routes;
 
     return (
-        <>
-            <nav className={classes.navigation}>
-                <h1 className={classes.titleHeader}>Big Robot Micro</h1>
-                <div className={classes.navBar}>
-                    <ul className={classes.unorderedList}>
-                        {
-                            routes.map((element) => {
-                                return <li className={classes.listItem} key={element.title}>
-                                    <Link href={element.routePath}>{element.title}</Link>
-                                </li>
-                            })}
-                    </ul>
-                </div>
-            </nav>
-        </>
+
+        <nav className={classes.navigation}>
+            <div className={classes.navBar}>
+                <ul className={classes.unorderedList}>
+                    {
+                        routes.map((element) => {
+                            return <li className={classes.listItem} key={element.title}>
+                                <Link href={element.routePath}>{element.title}</Link>
+                            </li>
+                        })}
+                </ul>
+            </div>
+        </nav>
+
     );
 };
 

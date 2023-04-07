@@ -1,5 +1,26 @@
 .container {
   padding: 0;
+  margin: 0;
+  /* padding-top: 20px; */
+}
+
+.mainImageHeader {
+  display: flex;
+  max-height: 300px;
+  /* width: 100%; */
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 400px;
+  height: 300px;
+}
+
+.logoWrapperView {
+  width: 420px;
+  height: 240px;
+  padding: 1.5rem;
 }
 
 .main {
@@ -10,7 +31,7 @@
 
 .infoMain {
   margin: 0;
-  background-color: #B1DAFB;
+  background-color: #b1dafb;
   height: 18rem;
   width: 100%;
   display: flex;
@@ -25,7 +46,7 @@
   display: inline-block;
   width: 31%;
   min-width: 300px;
-  background-color: #EDF7FF;
+  background-color: #edf7ff;
   border-radius: 1.5rem;
   box-shadow: 11px 11px 18px rgba(0, 0, 0, 0.19);
 }
@@ -40,12 +61,32 @@
 .bubbleTitle {
   font-weight: 100;
   text-align: center;
-  color: #6595BA;
+  color: #6595ba;
+}
+
+.hero {
+  width: 400px;
+  border-radius: 0;
+}
+
+.herodiv {
+  position: relative;
+  padding: 0;
+  margin-left: 8rem;
+  padding: 1rem;
+  display: inline-block;
+  width: 31%;
+  min-width: 300px;
+  /* background-color: #edf7ff; */
+  border-radius: 0.6rem;
+  box-shadow: 11px 11px 18px rgba(0, 0, 0, 0.19);
+  color: black;
+  background-color: #221;
 }
 
 .info2 {
   position: relative;
-  background-color: #75C2FF;
+  background-color: #75c2ff;
   margin: 0;
   padding: 0;
   padding-top: 2rem;
@@ -62,7 +103,7 @@
   width: 290px;
   font-size: 2rem;
   color: #080000;
-  background-color: #B1DAFB;
+  background-color: #b1dafb;
   min-height: 10rem;
   border-radius: 1.5rem;
   box-shadow: 11px 11px 18px rgba(0, 0, 0, 0.19);
@@ -102,7 +143,7 @@
   padding: 0;
   padding-top: 3rem;
   min-height: 18rem;
-  background-color: #B1DAFB;
+  background-color: #b1dafb;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -114,7 +155,7 @@
   width: 200px;
   font-size: 2rem;
   color: #080000;
-  background-color: #B1DAFB;
+  background-color: #b1dafb;
   min-height: 10rem;
   border-radius: 1.5rem;
   box-shadow: 11px 11px 18px rgba(0, 0, 0, 0.19);
@@ -232,5 +273,35 @@
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .mainImageHeader {
+    display: flex;
+    /* height: 130px; */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .unorderedList {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .listItem {
+    margin: 0.5rem;
+  }
+
+  .logo {
+    width: 200px;
+    height: 100px;
+  }
+
+  .logoWrapperView {
+    width: 230px;
+    height: 150px;
+    padding: 0rem;
+    padding-top: 1rem;
   }
 }

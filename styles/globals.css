@@ -6,17 +6,26 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+h1 {
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+}
+
 /* Custom, iPhone Retina */
-@media only screen and (min-width : 320px) {}
+@media only screen and (min-width: 320px) {
+}
 
 /* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {}
+@media only screen and (min-width: 480px) {
+}
 
 /* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {}
+@media only screen and (min-width: 768px) {
+}
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
+@media only screen and (min-width: 992px) {
   body {
     width: 100%;
     margin-left: auto;
@@ -25,7 +34,8 @@ body {
 }
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {}
+@media only screen and (min-width: 1200px) {
+}
 
 a {
   color: inherit;
@@ -38,12 +48,10 @@ a {
 
 @font-face {
   font-family: "Air Millhouse";
-  src: local("Air Millhouse"),
-    url(../fonts/airmill_o.ttf) format('truetype');
+  src: local("Air Millhouse"), url(../fonts/airmill_o.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Air Millhouse";
-  src: local("Air Millhouse"),
-    url(../fonts/air_mitalic.ttf) format('truetype');
+  src: local("Air Millhouse"), url(../fonts/air_mitalic.ttf) format("truetype");
 }
